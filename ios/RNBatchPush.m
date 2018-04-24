@@ -15,6 +15,7 @@ RCT_EXPORT_MODULE()
     if (self != nil) {
         NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
         NSString *batchAPIKey = [info objectForKey:@"BatchAPIKey"];
+        [BatchPush disableAutomaticIntegration];
         [Batch startWithAPIKey:batchAPIKey];
     }
 
